@@ -1,7 +1,9 @@
 node-chunked-stream
 ===================
 
-Pick a chunk size and get a stream that gives you data in right-sized chunks.
+[![Build Status](https://travis-ci.org/abi/node-chunked-stream.png)](https://travis-ci.org/abi/node-chunked-stream)
+
+Convert any stream into one that gives you data in user-defined sized chunks.
 
 ```javascript
 var assert = require('assert')
@@ -24,7 +26,7 @@ fs.createReadStream(path.join(__dirname, 'data/data.txt'))
   })
 ```
 
-Installation
+Install
 ------------
 
 `npm install node-chunked-stream`
