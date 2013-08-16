@@ -1,0 +1,33 @@
+{
+  "name": "node-chunked-stream",
+  "version": "0.1.0",
+  "description": "Convert any stream into one that gives you data in user-defined sized chunks",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "node examples/basic.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/abi/node-chunked-stream.git"
+  },
+  "keywords": [
+    "streams",
+    "chunking",
+    "size"
+  ],
+  "author": {
+    "name": "Abi Raja",
+    "email": "abimanyuraja@gmail.com",
+    "url": "http://abiraja.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abi/node-chunked-stream/issues"
+  },
+  "dependencies": {
+    "through": "~2.3.4"
+  }
+}
