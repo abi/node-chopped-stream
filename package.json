@@ -1,5 +1,5 @@
 {
-  "name": "node-chunked-stream",
+  "name": "chopped-stream",
   "version": "0.1.0",
   "description": "Convert any stream into one that gives you data in user-defined sized chunks",
   "main": "index.js",

@@ -29,4 +29,4 @@ fs.createReadStream(path.join(__dirname, 'data/data.txt'))
 Install
 ------------
 
-`npm install node-chunked-stream`
+`npm install chopped-stream`
