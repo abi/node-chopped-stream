@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/abi/node-chunked-stream.git"
+    "url": "git://github.com/abi/node-chopped-stream.git"
   },
   "keywords": [
     "streams",
@@ -25,7 +25,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/abi/node-chunked-stream/issues"
+    "url": "https://github.com/abi/node-chopped-stream/issues"
   },
   "dependencies": {
     "through": "~2.3.4"

@@ -1,19 +1,19 @@
-node-chunked-stream
+node-chopped-stream
 ===================
 
-[![Build Status](https://travis-ci.org/abi/node-chunked-stream.png)](https://travis-ci.org/abi/node-chunked-stream)
+[![Build Status](https://travis-ci.org/abi/node-chopped-stream.png)](https://travis-ci.org/abi/node-chopped-stream)
 
 Convert any stream into one that gives you data in user-defined sized chunks.
 
 ```javascript
 var assert = require('assert')
-var chunkedStream = require('../.')
+var choppedStream = require('../.')
 var fs = require('fs')
 var path = require('path')
 
 var numChunks = 0
 fs.createReadStream(path.join(__dirname, 'data/data.txt'))
-  .pipe(chunkedStream(1000))
+  .pipe(choppedStream(1000))
   .on('data', function (chunk) {
     numChunks++
     if (numChunks < 20) {
