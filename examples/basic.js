@@ -3,8 +3,17 @@ var choppedStream = require('../.')
 var fs = require('fs')
 var path = require('path')
 
-var numChunks = 0
-fs.createReadStream(path.join(__dirname, 'data/data.txt'))
+var numChunks = 0,
+	writeEnd = false, writeClose = false
+
+var readable = fs.createReadStream(path.join(__dirname, 'data/data.txt'));
+
+readable.on('close', function() {
+	assert(writeEnd, 'write stream should emit end');
+	assert(writeClose, 'write stream should emit close');
+})
+
+readable
   .pipe(choppedStream(1000))
   .on('data', function (chunk) {
     numChunks++
@@ -15,4 +24,10 @@ fs.createReadStream(path.join(__dirname, 'data/data.txt'))
       assert(chunk.length === 660,
              'Last chunk should be 660 bytes long')
     }
-  })
+	})
+	.on('end', function() {
+		writeEnd = true;
+	})
+	.on('close', function() {
+		writeClose = true;
+	})

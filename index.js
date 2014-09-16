@@ -35,6 +35,7 @@ module.exports = function (chunkSize) {
 
   var end = function (data) {
     this.queue(chunk)
+    this.queue(null)
   }
 
   return through(write, end)
